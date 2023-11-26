@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwadSagar - home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#"><img src="images\logo.png" alt="logo"></a>
+            <ul class="nav-bar navbar">
+                <li><a href="home.html">home</a></li>
+                <li><a href="trending.html">order</a></li>
+                <li><a href="aboutUs.html">aboutUs</a></li>
+                <li><a href="#">contactUs</a></li>
+                <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <!--
+                        <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="type to search...">
+                    <a class="search-btn" href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    </div>
+                    -->
+
+                    <!--
+                        <div class="dark_mode"><i class="fa-solid fa-moon"></i></div>
+                    -->
+            </ul>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+    </header>
+
+    <div class="dropdown_menu">
+        <ul class="nav-bar">
+            <li><a href="home.html">home</a></li>
+            <li><a href="trending.html">order</a></li>
+            <li><a href="aboutUs.html">aboutUs</a></li>
+            <li><a href="#">contactUs</a></li>
+            <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <div class="dark_mode"><i class="fa-solid fa-moon"></i></div>
+                <!--
+                        <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="type to search...">
+                    <a class="search-btn" href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    </div>
+                    -->
+        </ul>
+    </div>
+
+    <section class="banner4">
+        <h2 class="h2_box" id="h2_up">S</h2>
+        <h2 class="h2_box" id="h2_down">w</h2>
+        <h2 class="h2_box" id="h2_up">a</h2>
+        <h2 class="h2_box" id="h2_down">d</h2>
+        <h2 class="h2_box" id="h2_up">S</h2>
+        <h2 class="h2_box" id="h2_down">a</h2>
+        <h2 class="h2_box" id="h2_up">g</h2>
+        <h2 class="h2_box" id="h2_down">a</h2>
+        <h2 class="h2_box" id="h2_up">r</h2>
+    </section>
+
+    <section class="contact_section">
+        <div class="form-1">
+            <button class="form_button" onmouseover="showMore()" onmouseout="showLess()">Contact Form</button>
+            <form class="form_section">
+                <input type="text" name="Name" placeholder="enter your name">
+                <input type="number" name="number" placeholder="enter your contact no.">
+                <input type="mail" name="mail" placeholder="enter your mail id">
+                <input type="textarea" class="message" name="message" placeholder="enter your message">
+                <button class="form_btn">Submit</button>
+            </form>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.8039652448283!2d77.19309047473222!3d28.755269375597848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfe2a68a73f73%3A0x20df28b461e68d84!2sKhushi%20Banquet%20Hall!5e0!3m2!1sen!2sin!4v1699452294496!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="footer" >
+        <div class="column-1">
+            <div class="logo-img"><img src="images\logo.png" alt="swadSagar"></div>
+            <ul>
+                <li><a href="#">Contact</a></li> 
+                <li><a href="#">Address: </a><span>524/72 Sant Nagar, Street 4, New Delhi, 110084 </span></li>
+                <li><a href="#">Phone:</a><span>(+91)-8920915572</span></li>
+            </ul>
+            
+            <h3>Follow Us : </h3>
+            <ul class="social-links">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-envelope"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="column-2 col">
+            <a href="#">About</a>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Delivery Information</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="column-3 col">
+            <a href="#">My Account</a>
+            <ul>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">My WishList</a></li>
+                <li><a href="#">ViewCart</a></li>
+                <li><a href="#">Track My Order</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <!--
+        <div class="column-4 col">
+            <a href="#">Secured Payment Gateways</a>
+        </div>
+        -->
+    </section>
+
+    
+    <script src="/02_script.js"></script>
+</body>
+</html>
