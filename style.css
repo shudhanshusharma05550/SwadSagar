@@ -1,0 +1,1349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 200vh;
+    background-color: whitesmoke;
+    transition: .6s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    transition: 0.6s;
+    z-index: 100000;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+header li {
+    list-style: none;
+}
+
+header img {
+    width: 40%;
+    height: 50%;
+    animation: logo 5s ease-in-out;
+}
+
+@keyframes logo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header img:hover {
+    transition: 0.3s;
+    scale: 1.02;
+}
+
+header .nav-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: #000;
+}
+
+.nav-bar li {
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover {
+    scale: 1.1;
+    transition: 0.3s;
+    color: rgb(202, 65, 88);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.fa-bag-shopping {
+    color: rgb(105, 161, 22);
+    font-size: 1.8rem;
+    transition: .3s ease-in-out;
+}
+
+.fa-bag-shopping:hover {
+    scale: 1.1;
+}
+
+.fa-magnifying-glass {
+    font-size: 1.2rem;
+}
+
+.search_area {
+    position: relative;
+    margin-top: 10rem;
+}
+
+.search-box {
+    margin-left: 38%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 10px;
+    width: 20rem;
+    border: 2px solid #000;
+    text-align: center;
+    background-color: #fff;
+    color: rgb(202, 65, 88);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+}
+
+.search-btn {
+    padding: 5px;
+    border-radius: 40px;
+    color: #fff;
+    border: 2px solid rgb(202, 65, 88);
+    background-color: rgb(202, 65, 88);
+}
+
+.search-box:hover > .search-txt {
+    transition: 0.6s ease-in-out;
+    width: 10rem;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    transition: 0.6s ease-in-out;
+    background-color: #fff;
+    color: rgb(202, 65, 88);
+}
+
+.search-txt {
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #000;
+    font-size: 1rem;
+    width: 0px;
+}
+
+.dark_mode {
+    font-size: 25px;
+    cursor: pointer;
+    border: 3px solid #000;
+    width: 70px;
+    border-radius: 40px;
+    padding: 0px 5px;
+    overflow: hidden;
+    transition: .6s ease-in-out;
+    font-weight: 700;
+    color: #504e4e;
+}
+
+.right_align {
+    text-align: right;
+    color: white;
+    background-color: #504e4e;
+}
+
+.fa-moon:hover {
+    scale: 1.1;
+}
+
+.toggle_btn {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+/**DROPDOWN**/
+.dropdown_menu {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 7rem;
+    width: 300px;
+    text-align: center;
+    height: 0;
+    z-index: 100000;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li {
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown_menu.open {
+    height: 300px;
+}
+
+.dropdown_menu a {
+    color: #000;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        padding: 0px 2rem; 
+    }
+    
+    header .navbar {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+       display: block;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+#home .container-1 {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background: url('images/pexels-ella-olsson-1640773.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.container-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container-1 h1 {
+    font-size: 3rem;
+    color: rgb(220, 15, 50);
+}
+
+.container-1 .tagline {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.container-1 .btn-1 {
+    padding: 1.3rem;
+    background: transparent;
+    color: rgb(220, 15, 50);
+    border: 3px double rgb(220, 15, 50);
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.6s;
+    cursor: pointer;
+    animation: button1 5s ease-in-out;
+}
+
+.btn-1 a {
+    color: rgb(220, 15, 50);
+}
+
+.btn-1 a:hover {
+    color: white;
+}
+
+@keyframes button1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-1 .btn-1:hover {
+    border-radius: 0px;
+    border: 3px solid white;
+    color: white;
+    background-color: rgb(220, 15, 50);
+}
+
+
+
+.fa-arrow-right {
+    background-color: white;
+    color: rgb(202, 65, 88);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#projects {
+    color: #000;
+    background-color: rgb(251, 251, 238);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.project {
+    width: 20%;
+    height: 70%;
+    padding: 40px 0px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    border-radius: 50%;
+}
+
+.project img:hover {
+    box-shadow: 0 0 6px rgb(0,0,0.2);
+    scale: 1.01;
+    opacity: 0.7;
+}
+
+.project a {
+    color: rgb(202, 65, 88);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.section-p1 {
+    padding: 80px 40px;
+}
+
+#feature {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.fe {
+    background-color: #fff;
+    width: 15%;
+    height: 50%;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: pointer;
+    transition: 0.6s all ease-in-out;
+}
+
+.fe:hover {
+    box-shadow: 0 0 6px rgb(0,0,0.2);
+    scale: 1.02;
+}
+
+.fe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+}
+
+.fe a{
+    font-weight: 500
+}
+
+.fe-1 {
+    color: rgb(26, 208, 208);
+}
+
+.fe-2 {
+    color: orange;
+}
+
+.fe-3 {
+    color: salmon;
+}
+
+.fe-4 {
+    color: blue;
+}
+
+.fe-5 {
+    color: rgb(204, 38, 38);
+}
+
+.btn-3 {
+    padding: 20px 40px;
+    border-radius: 40px;
+    background-color: rgb(202, 65, 88);
+    color: white;
+    border: 3px double white;
+    transition: 0.6s all ease-in-out;
+    cursor: pointer;
+}
+
+
+.btn-3:hover {
+    color: rgb(202, 65, 88);
+    background-color: white;
+    border: 3px double rgb(202, 65, 88);
+    font-weight: 500;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    background: url('images/Chefs-cooking-Indian-food-in-a-restaurant-kitchen.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.banner pre {
+    color: #fff;
+    text-align: center;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 3rem;
+}
+/*  FooD ITEMS  */
+
+#explorer {
+    position: relative;
+    text-align: center;
+    background-color: rgb(248, 252, 251);
+}
+
+#explorer h1 {
+    font-size: 2rem;
+    word-spacing: 5px;
+}
+
+#explorer .pro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+#explorer .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(204, 200, 200);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.6s all ease-in-out;
+    margin: 15px 0;
+}
+
+#explorer .pro:hover {   
+    box-shadow: 0 0 6px rgb(0,0,0.2);
+}
+
+#explorer .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+#explorer .pro .quick-view {
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-weight: 700;
+    border: 2px solid blue;
+    background-color: rgb(243, 243, 246);
+    color: blue;
+    z-index: 2;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.quick-view:hover {
+    scale: 1.1;
+}
+
+.pro .star .checked {
+    color: rgb(202, 65, 88);
+}
+
+
+#explorer .rates {
+    display: flex;
+    justify-content: space-between;
+}
+
+#explorer .btn-3 a {
+    font-size: 1rem;
+}
+
+#explorer .btn-3 a:hover {
+    color: rgb(202, 65, 88);
+}
+
+#login {
+    color: #fff;
+    background-color: rgb(4, 4, 59);
+    transition: 0.5s all ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@keyframes login {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    animation: login 5s ease-in-out;
+}
+
+.title h3 {
+    font-size: 1.5rem;
+}
+
+.title span {
+    color: rgb(181, 176, 176);
+}
+
+.title b {
+    color: goldenrod;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 2rem;
+}
+
+.sign-up {
+    animation: login 5s ease-in-out;
+}
+
+.login-btn img{
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.login-btn {
+    transition: 0.3s all ease-in-out;
+}
+
+.login-btn a {
+    position: absolute;
+    margin-top: 2%;
+    margin-left: -8%;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-btn a:hover {
+    scale: 1.1;
+}
+
+.sign-up .signup-btn {
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid goldenrod;
+    cursor: pointer;
+}
+
+.sign-up:hover {
+    scale: 1.1;
+    transition: 0.6s all ease-in-out;
+}
+
+.sign-up .signup {
+    padding: 10px 20px;
+}
+
+#footer {
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 40px;
+}
+
+.column-1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.logo-img {
+    width: 25%;
+    height: 100%;
+}
+
+.column-1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.column-1 img:hover {
+    scale: 1.09;
+    transition: 0.3s all ease-in-out;
+}
+
+.column-1 li {
+    list-style: none;
+}
+
+.column-1 a {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.column-1 span {
+    color: rgb(131, 130, 129);
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+}
+
+.social-links i {
+    font-size: 2rem;
+}
+
+.column-2 ul a, .column-3 ul a, .column-4 ul a{
+    padding-top: 20px;
+    color: rgb(131, 130, 129);
+    font-size: 15px;
+}
+
+.column-2 li, .column-3 li, .column-4 li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.column-2 a, .column-3 a, .column-4 a {
+    color: #000;
+}
+
+.col a:hover {
+    text-decoration: underline;
+    transition: 3s;
+}
+
+@media screen and (max-width: 612px) {
+
+    .container-1 .tagline {
+        font-size: 1rem;
+    }
+
+    .container-1 h1 {
+        font-size: 2rem;
+    }
+
+    .container-1 .btn-1 {
+        padding: 1rem;
+    }
+    
+    #home .container-1 {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 40%;
+    }
+}
+
+/*SECOND PAGE*/
+
+.banner-2 {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.btn-3 a {
+    color: white;
+}
+
+.banner-3 {
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: .9;
+    margin-top: 50px;
+}
+
+.banner-3 .about_box {
+    color: black;
+    background-color: #fff;
+    font-size: 3rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.6s all ease-in-out;
+    cursor: pointer;
+}
+
+#b1:hover {
+    scale: 1.2;
+}
+
+#b2:hover {
+    scale: 1.2;
+}
+
+#b3:hover {
+    scale: 1.2;
+}
+
+#b4:hover {
+    scale: 1.2;
+}
+
+#b5:hover {
+    scale: 1.2;
+}
+
+#b6:hover {
+    scale: 1.2;
+}
+
+#b7:hover {
+    scale: 1.2;
+}
+
+.section-p2 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.img_container {
+    width: 50%;
+    height: 70vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.img_container img {
+    width: 100%;
+    height: 100%;
+}
+
+.paragraph {
+    width: 40%;
+    height: 70vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner4 {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    transition: 0.6s all ease-in-out;
+}
+
+
+
+.banner4 h2 {
+    color: #000;
+    background-color: #fff;
+    font-size: 3rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.6s all ease-in-out;
+    cursor: pointer;
+   /* animation:  move1 5s infinite;*/
+}
+
+/*
+
+#h2_up {
+    animation: move2 5s infinite;
+}
+*/
+@media screen and (max-width:500px) {
+    .banner4 {
+        height: 50vh;
+    }
+
+    .banner4 h2 {
+        font-size: 2rem;
+    }
+}
+
+#h2_down {
+    animation: move3 3s infinite;
+}
+
+@keyframes move2 {
+    from {
+        margin-top: -30%;
+        padding: 20px;
+    }
+    to {
+        margin-top: 0%;
+        padding: 0px;
+    }
+}
+
+@keyframes move3 {
+    from {
+        margin-top: 30%;
+        padding: 20px;
+    }
+    to {
+        margin-top: 0%;
+        padding: 0px;
+    }
+}
+
+
+
+.contact_section {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.contact_section .map {
+    border: 2px solid rgb(202, 65, 88);
+    border-radius: 40px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form_button {
+    background-color: rgb(169, 165, 165);
+    padding: 10px 20px;
+    color: #000;
+    font-weight: 600;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.form_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+}
+
+.form_section input {
+    background-color: rgb(241, 229, 231);
+    color: rgb(202, 65, 88);
+    border: 2px solid rgb(202, 65, 88);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 30px;
+    transition: .6s;
+}
+
+.form_section .message {
+    padding: 30px 40px;
+}
+
+.form_btn {
+    background-color: rgb(241, 229, 231);
+    padding: 10px 20px;
+    color: rgb(202, 65, 88);
+    font-weight: 600;
+    border: 2px solid rgb(202, 65, 88);
+    border-radius: 40px;
+    transition: .6s;
+    cursor: pointer;
+}
+
+.form_section input:hover {
+    scale: 1.1;
+    border-radius: 3px double rgb(202, 65, 88);
+}
+
+.showMore {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Login Page*/
+.login_container {
+    width: 60%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(220, 15, 50);
+    border-radius: 40px;
+    margin-left: 20%;
+}
+
+.user, .register {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.details_container {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user input, .register input, .details_container2 input {
+    background-color: transparent;
+    color: rgb(202, 65, 88);
+    border: 2px solid rgb(202, 65, 88);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 30px;
+    transition: .6s;
+}
+
+.headline {
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(202, 65, 88);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+}
+
+.headline:hover {
+    scale: 1.1;
+    text-decoration: underline;
+}
+
+.user p, .register p {
+    color: rgb(169, 165, 165);
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+.user p:hover, .register p:hover {
+    text-decoration: underline;
+}
+
+.loginBtn {
+    background-color: rgb(91, 145, 11);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    color: rgb(91, 145, 11);
+    background-color: transparent;
+    border: 3px double rgb(91, 145, 11);
+    scale: 1.1;
+}
+
+.registerBtn {
+        background-color: blue;
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 40px;
+        border: 2px solid #fff;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+}
+
+.registerBtn:hover {
+    color: blue;
+    background-color: transparent;
+    border: 3px double blue;
+    scale: 1.1;
+}
+
+.details_container a {
+    color: blue;
+}
+
+.vertical_line {
+    border-left: 2px solid rgb(220, 15, 50);
+    height: 300px;
+}
+
+@media screen and (max-width: 888px) {
+    .user input, .register input, .details_container2 input {
+        padding: 0px;
+    }
+}
+
+
+
+.dropdownContainer {
+    margin: 0px 80px;
+    border: 3px solid rgb(220, 15, 50);
+    border-radius: 20px;
+    padding: 20px 10px;
+    display: none;
+}
+
+.dropdownContainer .user a {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dropdownContainer .user a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 2px solid rgb(220, 15, 50);
+}
+
+.dropdownContainer .details_container {
+    display: none
+}
+
+.create_account a {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.create_account a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 663px) {
+    .login_container {
+        display: none;
+    }
+    .dropdownContainer {
+        display: block;
+    }
+}
+
+.fa-angles-left {
+    color: rgb(220, 15, 50);
+    border-radius: 100%;
+    padding: 5px;
+    transition: .3s ease-in-out;
+}
+
+.fa-angles-left:hover {
+    background-color: rgb(220, 15, 50);
+    color: white;
+}
+
+/*detailCOntainer */
+
+.details_container1, .details_container2 {
+    display: none;
+}
+
+.open_1, .open_2 {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.foodArea {
+    text-align: center;
+}
+
+.foodArea .itemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.foodArea .itemContainer .quick-view {
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-weight: 700;
+    border: 2px solid blue;
+    background-color: rgb(243, 243, 246);
+    color: blue;
+    z-index: 2;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.quick-view:hover {
+    scale: 1.1;
+}
+
+
+.foodArea .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(204, 200, 200);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.6s all ease-in-out;
+    margin: 15px 0;
+}
+
+.foodArea .pro:hover {   
+    box-shadow: 0 0 6px rgb(0,0,0.2);
+}
+
+.foodArea .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.foodArea .pro .desc {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.foodArea .pro .desc span {
+    color: rgb(181, 176, 176);
+}
+
+.foodArea .pro .desc h5 {
+    padding-top: 10px;
+}
+
+.pro .star .checked {
+    color: rgb(202, 65, 88);
+}
+
+.foodArea .pro .cart {
+    width: 40px;
+    height: 40px;
+    color: rgb(202, 65, 88);
+    background-color: rgb(222, 198, 206);
+    border: 2px solid rgb(202, 65, 88);
+    border-radius: 20px;
+    line-height: 40px;
+    padding: 0px 7px;
+    transition: 0.6s all ease-in-out;
+}
+
+.foodArea .pro .cart:hover {
+    color: white;
+    background-color: rgb(202, 65, 88);
+    scale: 1.03;
+}
+
+.foodArea .rates {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foodArea .btn-3 a {
+    font-size: 1rem;
+}
+
+.foodArea .btn-3 a:hover {
+    color: rgb(202, 65, 88);
+}
+/* SERCH FOOD DESCRIPTION */
+
+ .pop-view {
+    z-index: 100002;
+    background-color: rgba(23, 22, 22, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pop-view.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-card {
+    position: relative;
+    display: flex;
+    margin-left: 20%;
+    width: 80rem;
+    height: 50vh;
+    background-color: white;;
+}
+
+.popup-card i {
+    position: absolute;
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-top: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.product-img {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.info {
+    background-color: white;
+    height: 60vh;
+    border-radius: 20px;
+    margin-right: 20%;
+}
+
+.info h4 {
+    font-size: 2rem;
+}
+
+.info span {
+    color: rgb(114, 110, 110);
+    letter-spacing: 2px;
+}
+
+
+.info .rates {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rates .cart {
+    font-size: 2rem;
+    color: rgb(202, 65, 88);
+    border: 2px solid rgb(202, 65, 88);
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.rates .cart:hover {
+    scale: 1.1;
+}
